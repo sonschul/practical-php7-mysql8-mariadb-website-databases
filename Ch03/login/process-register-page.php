@@ -35,7 +35,7 @@ try {
 	    $hashed_passcode = password_hash($password1, PASSWORD_DEFAULT); 
 		require ('mysqli_connect.php'); // Connect to the db.     
 		// Make the query:                                               
-		$query = "INSERT INTO users (userid, first_name, last_name, email, password, registration_date) ";
+		$query = "INSERT INTO users (user_id, first_name, last_name, email, password, registration_date) ";
 		$query .="VALUES(' ', ?, ?, ?, ?, NOW() )";		                
         $q = mysqli_stmt_init($dbcon);                                  
         mysqli_stmt_prepare($q, $query);
